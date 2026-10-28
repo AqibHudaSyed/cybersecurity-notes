@@ -1,5 +1,3 @@
-# cybersecurity-notes
-
 # Cybersecurity Notes
 
 My study notes on core cybersecurity topics, written in my own words. I update them as I learn.
@@ -16,4 +14,4 @@ My study notes on core cybersecurity topics, written in my own words. I update t
 | 06 | Detection and incident response | 🔜 |
 | 07 | Python for security automation | 🔜 |
 
-Projects: [cybersecurity-portfolio](https://github.com/<your-username>/cybersecurity-portfolio)
+Projects: https://github.com/AqibHudaSyed/cybersecurity-portfolio
