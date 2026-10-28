@@ -14,4 +14,4 @@ My study notes on core cybersecurity topics, written in my own words. I update t
 | 06 | Detection and incident response | 🔜 |
 | 07 | Python for security automation | 🔜 |
 
-Projects: https://github.com/AqibHudaSyed/cybersecurity-portfolio
+Projects: [cybersecurity-portfolio](https://github.com/AqibHudaSyed/cybersecurity-portfolio)
