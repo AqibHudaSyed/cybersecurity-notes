@@ -45,14 +45,25 @@ Almost every security decision maps back to one of these three.
 - **Security posture** – how ready an organization is to defend its important assets and adapt when things change.
 - **Network security** – keeping the network infrastructure safe from people who should not be on it.
 - **Cloud security** – making sure cloud resources are set up correctly and only the right people can reach them. Misconfiguration is one of the most common causes of cloud breaches.
+- **The cloud** – a network of servers that keeps data and resources in remote data centres, reached over the internet. Securing it is one of the fastest-growing areas of the field.
+- A stronger security posture means lower overall risk, and staying compliant keeps an organization clear of fines and many breaches.
 
 ### What a junior security analyst does
 
 1. Watches systems and networks for anything suspicious
 2. Sets up and maintains protective tools (firewalls, antivirus, updates)
 3. Runs internal checks and audits to find weak spots
+4. Keeps up with security trends and helps plan how to stop incidents before they happen
 
-Useful skills come in two kinds: **transferable** ones (communication, teamwork, problem-solving) that carry over from any job, and **technical** ones (tools, scripting, SIEM, packet analysis) that are specific to the field.
+Useful skills come in two kinds:
+
+| Transferable (carry over from any job) | Technical (specific to the field) |
+| --- | --- |
+| Clear communication with technical and non-technical people | Scripting and programming to automate slow tasks |
+| Problem-solving: spotting patterns and picking the most efficient fix | Working with SIEM tools and log data |
+| Time management: knowing what is urgent and prioritising it | Using intrusion detection systems |
+| A growth mindset: the field changes fast, so keep learning | Knowing the current threat landscape (new malware, attacker trends) |
+| Openness to different perspectives, which leads to better solutions | Incident response: following set procedures when something goes wrong |
 
 ### Why businesses invest in security
 
@@ -68,7 +79,7 @@ Useful skills come in two kinds: **transferable** ones (communication, teamwork,
 
 - **Threat** – anything that could damage an asset. It can be an event (phishing email, power cut, fire), not just a person.
 - **Threat actor** – the person or group creating the risk.
-- **Insider** – someone with inside access: current staff, ex-staff, contractors, vendors, partners. Ex-employees and vendors count too.
+- **Insider** – someone with inside access: current staff, ex-staff, contractors, vendors, partners. Ex-employees and vendors count too. Insider threats are not always deliberate: clicking a bad link by mistake is accidental, while snooping through data without permission is intentional.
 
 ### Types of threat actors
 
@@ -302,8 +313,8 @@ Example: if patient data is exposed, telling the patients is both a legal and an
 | --- | --- | --- |
 | Logs | Record what happened in a system | "User X logged in at 10:05" |
 | SIEM | Pulls logs from many systems into one place, analyses them and raises alerts | Splunk Enterprise, Splunk Cloud, Google SecOps (formerly Chronicle) |
-| IDS (intrusion detection system) | Watches activity and alerts on possible intrusions (does not block) | Alert on repeated failed logins |
-| Antivirus | Finds and removes malware | Quarantines an infected download |
+| IDS (intrusion detection system) | Inspects network packets and alerts on possible intrusions (does not block) | Alert on repeated failed logins |
+| Antivirus (anti-malware) | Finds and removes malware, sometimes by scanning memory for known patterns | Quarantines an infected download |
 | Packet sniffer / protocol analyser | Captures and inspects network traffic | tcpdump (CLI), Wireshark (GUI) |
 | Playbook | Step-by-step checklist for a known situation | What to do when a phishing email is reported |
 
@@ -316,6 +327,32 @@ Example: if patient data is exposed, telling the patients is both a legal and an
 | Linux | Open-source operating system | Most security tooling runs on it; the command line is essential |
 
 A **database** is an organized store of data; a **data point** is a single piece of it (e.g. one login timestamp).
+
+### SIEM hosting
+
+A SIEM shows its data on dashboards and cuts down how much raw log data an analyst has to read. It can run **on-premise** (on the organization's own servers) or in the **cloud**. Cloud-hosted versions are easier to set up and maintain, so smaller or less experienced teams often pick them.
+
+### Other useful concepts
+
+| Concept | In short |
+| --- | --- |
+| Automation | Letting technology handle repetitive work, which also cuts human error |
+| Operating system | The layer between hardware and the user (Linux, macOS, Windows) |
+| Open source | Code anyone can read and help improve |
+| Command line (CLI) | A text interface where you type commands to control the computer |
+| Web vulnerability | A flaw in a web app that an attacker can abuse for access, data theft or malware |
+| OWASP Top 10 | A regularly updated list of the most serious web application risks |
+| Penetration testing | A permitted, simulated attack used to find weaknesses before real attackers do |
+
+### Encryption vs encoding
+
+**Encryption** turns readable data (plaintext) into scrambled data (ciphertext) so only someone with the key can read it. Its job is confidentiality.
+
+| Encryption | Encoding |
+| --- | --- |
+| Keeps data secret | Changes data format so different systems can exchange it |
+| Needs a key to reverse | Uses a public method anyone can reverse (e.g. Base64) |
+| A security control | Not a security control |
 
 ---
 
@@ -330,6 +367,15 @@ Digital evidence is fragile. Handle it carelessly and it can be lost or become u
 3. Running processes and live network connections
 4. Disk
 5. Backups and archives
+
+**Volatile data** is anything lost the moment a device powers off, which is why it goes first. Investigators then work on **copies**, never the original, so the evidence stays untouched.
+
+Two procedures guide this work:
+
+| Procedure | What it covers |
+| --- | --- |
+| Chain of custody | A written record of who held the evidence, when, where and why. Every hand-over is logged so its location is always known |
+| Protecting and preserving evidence | Handling fragile, volatile evidence carefully, following the order of volatility |
 
 ---
 
@@ -347,6 +393,10 @@ Digital evidence is fragile. Handle it carelessly and it can be lost or become u
 | Governance vs architecture | Policies and direction vs technical design |
 | IDS vs IPS | IDS alerts; IPS can block |
 | Linux vs SQL | Operating system vs database query language |
+| Encryption vs encoding | Secrecy with a key vs format change anyone can undo |
+| Chain of custody vs preserving evidence | Tracking who held it vs keeping it undamaged |
+| IDS vs penetration test | Watches and alerts vs actively simulates an attack |
+| Accidental vs intentional insider | Honest mistake vs deliberate misuse |
 | CIA scenario: site down / data altered / data leaked | Availability / Integrity / Confidentiality |
 
 ---
@@ -358,12 +408,15 @@ Digital evidence is fragile. Handle it carelessly and it can be lost or become u
 | Adversarial AI | Using or tricking AI/ML to boost attacks |
 | Antivirus | Detects and removes malware |
 | Asset | Anything of value to the organization |
+| Automation | Technology doing repetitive work instead of people |
 | BEC | Email fraud posing as a known contact to get money |
+| Chain of custody | Record of who held evidence and when |
 | CIA triad | Confidentiality, integrity, availability |
 | Compliance | Meeting internal rules and external laws |
 | Cryptographic attack | Attack on encrypted communication |
 | Data point | One piece of data |
 | Database | Organized collection of data |
+| Encryption | Turning plaintext into ciphertext to keep it secret |
 | Hacktivist | Hacks for a political cause |
 | IDS | Watches and alerts on intrusions |
 | Insider threat | Someone with inside access who poses a risk |
@@ -373,6 +426,7 @@ Digital evidence is fragile. Handle it carelessly and it can be lost or become u
 | Order of volatility | Collect the most short-lived evidence first |
 | OWASP | Non-profit focused on software and web app security |
 | Packet sniffer | Captures and inspects network traffic |
+| Penetration testing | Authorised simulated attack to find weaknesses |
 | Phishing | Tricking people via messages |
 | PHI | Health-related personal information |
 | PII | Data that identifies a person |
@@ -386,4 +440,6 @@ Digital evidence is fragile. Handle it carelessly and it can be lost or become u
 | SQL | Language to query databases |
 | Supply-chain attack | Reaching a target through its vendors |
 | USB baiting | Dropping infected USB drives as bait |
+| Volatile data | Data lost when a device powers off |
+| Web vulnerability | A flaw in a web app attackers can abuse |
 | Watering hole | Infecting a site the target group visits |
