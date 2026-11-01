@@ -7,7 +7,7 @@ My study notes on core cybersecurity topics, written in my own words. I update t
 | # | Topic | Status | Notes |
 | --- | --- | --- | --- |
 | 01 | Foundations of cybersecurity | ✅ | [View notes](01-foundations-of-cybersecurity.md) |
-| 02 | Security domains, frameworks, controls and audits | 🔜 | — |
+| 02 | Security domains, frameworks, controls and audits | ✅ | [View notes](02-security-risks.md) 
 | 03 | Networks and network security | 🔜 | — |
 | 04 | Linux and SQL | 🔜 | — |
 | 05 | Assets, threats and vulnerabilities | 🔜 | — |
