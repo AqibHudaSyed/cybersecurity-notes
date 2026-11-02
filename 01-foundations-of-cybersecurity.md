@@ -106,7 +106,7 @@ Others worth knowing: beginners using ready-made tools and scripts, hackers-for-
 | 1986 | Brain virus | Spread worldwide via floppy disks; showed malware can escape its creator's control |
 | 1988 | Morris worm | Self-copying program that crashed thousands of machines; led to the first incident response teams (CERTs) |
 | 2000 | ILOVEYOU / LoveLetter | Email that spread by mailing itself to contacts; a classic social engineering case |
-| 2017 | Equifax breach | Data of roughly 143 million people exposed through an unpatched known flaw |
+| 2017 | Equifax breach | Data of roughly 147 million people exposed through an unpatched known flaw |
 
 Lesson from all four: technology changes, but unpatched systems and human trust keep getting exploited.
 
@@ -292,7 +292,7 @@ Security professionals see private data every day, so ethics matter: stay unbias
 
 | Where | Position |
 | --- | --- |
-| United States | No. Laws such as the Computer Fraud and Abuse Act (1986) and the Cybersecurity Information Sharing Act (2015) make it illegal for private parties; only authorised government or military personnel may. Private counterattacks are treated as vigilantism. |
+| United States | No. The Computer Fraud and Abuse Act (1986) makes unauthorized access to any system illegal, including the attacker's. The Cybersecurity Information Sharing Act (2015) allows defensive measures only on your own systems. Only authorized government or military personnel may act offensively. Private counterattacks are treated as vigilantism. |
 | International guidance (ICJ – International Court of Justice) | Only under narrow conditions: it hits only the original attacker, it is a direct request to stop, it does not escalate, and its effects can be undone. |
 
 In practice organizations do not hack back: it is legally risky, can escalate, and could even trigger an international incident if the attacker is state-backed. The Tallinn Manual covers this in depth.
