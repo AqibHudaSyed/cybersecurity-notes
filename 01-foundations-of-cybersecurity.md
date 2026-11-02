@@ -1,4 +1,4 @@
-# 02 —  Cybersecurity Fundamentals
+# 02 —  Foundations of Cybersecurity
 
 My personal notes on core cybersecurity concepts, written in simple English.
 
