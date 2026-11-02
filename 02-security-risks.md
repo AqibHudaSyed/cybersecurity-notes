@@ -352,7 +352,7 @@ Types include incident response, security alert, team-specific and product-speci
 | 5. Post-incident activity | Document, inform leadership, apply lessons learned |
 | 6. Coordination | Report and share information throughout the process |
 
-NIST SP 800-61 Rev. 2 described this lifecycle in four phases: preparation; detection and analysis; containment, eradication and recovery; post-incident activity. Rev. 3 (2025) replaces it by mapping incident response to the NIST CSF 2.0 functions.
+NIST's incident response guide (SP 800-61) used to show this in four phases: preparation; detection and analysis; containment, eradication and recovery; post-incident activity. The 2025 update drops these phases and links incident response to the six NIST CSF functions instead.
 
 **Incident and vulnerability response playbooks** are based on the organization's business continuity plan. Following their steps keeps the response legal, timely and safe for forensic evidence.
 
