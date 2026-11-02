@@ -199,7 +199,7 @@ Used together, these controls create **defense in depth**.
 |---|---|---|
 | Confidentiality | Only authorized users can access data (need to know) | A bank protects customers' financial data |
 | Integrity | Data is correct, authentic and reliable | A bank freezes an account when spending suddenly changes |
-| Availability | Authorized users can reach data when they need it | Remote staff access only what their role requires |
+| Availability | Authorized users can reach data when they need it | Customers can use online banking at any time, even during peak hours |
 
 - **Encryption** turns readable **plaintext** into unreadable **ciphertext**; it is decrypted back with a key. It mainly protects confidentiality.
 - **Hashing and digital signatures** verify integrity.
@@ -352,7 +352,7 @@ Types include incident response, security alert, team-specific and product-speci
 | 5. Post-incident activity | Document, inform leadership, apply lessons learned |
 | 6. Coordination | Report and share information throughout the process |
 
-NIST SP 800-61 describes the same lifecycle in four phases: preparation; detection and analysis; containment, eradication and recovery; post-incident activity.
+NIST SP 800-61 Rev. 2 described this lifecycle in four phases: preparation; detection and analysis; containment, eradication and recovery; post-incident activity. Rev. 3 (2025) replaces it by mapping incident response to the NIST CSF 2.0 functions.
 
 **Incident and vulnerability response playbooks** are based on the organization's business continuity plan. Following their steps keeps the response legal, timely and safe for forensic evidence.
 
