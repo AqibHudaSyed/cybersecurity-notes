@@ -1,4 +1,4 @@
-# Cybersecurity Fundamentals – Study Notes
+# 02 —  Cybersecurity Fundamentals
 
 My personal notes on core cybersecurity concepts, written in simple English.
 
