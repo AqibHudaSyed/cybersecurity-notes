@@ -1,4 +1,4 @@
-# 02 —  Foundations of Cybersecurity
+# Cybersecurity Fundamentals – Study Notes
 
 My personal notes on core cybersecurity concepts, written in simple English.
 
@@ -35,9 +35,10 @@ Almost every security decision maps back to one of these three.
 
 ### Personal data
 
-- **PII** – any detail that can point to a specific person: name, phone number, email, address.
-- **Sensitive PII** – PII that causes serious harm if leaked, so it gets stricter handling: ID numbers (e.g. Aadhaar, SSN), card numbers, bank details, medical records.
+- **PII** – any detail that can point to a specific person: name, date of birth, phone number, email, home or IP address.
+- **Sensitive PII** – PII that causes serious harm if leaked, so it gets stricter handling: ID numbers (e.g. Aadhaar, SSN), card numbers, bank details, medical records, biometric data like face scans.
 - All sensitive PII is PII, but not the other way round.
+- **Identity theft** – stealing someone's personal details to pretend to be them, usually for money.
 
 ### A few more terms
 
@@ -52,8 +53,9 @@ Almost every security decision maps back to one of these three.
 
 1. Watches systems and networks for anything suspicious
 2. Sets up and maintains protective tools (firewalls, antivirus, updates)
-3. Runs internal checks and audits to find weak spots
+3. Runs security audits (reviews of security records, activities and documents) to find weak spots
 4. Keeps up with security trends and helps plan how to stop incidents before they happen
+5. Works with developers so new products are built securely, and helps with ethical hacking tests
 
 Useful skills come in two kinds:
 
@@ -64,6 +66,8 @@ Useful skills come in two kinds:
 | Time management: knowing what is urgent and prioritising it | Using intrusion detection systems |
 | A growth mindset: the field changes fast, so keep learning | Knowing the current threat landscape (new malware, attacker trends) |
 | Openness to different perspectives, which leads to better solutions | Incident response: following set procedures when something goes wrong |
+
+Other useful skills: teamwork, analysing complex situations, and digital forensics (finding and preserving evidence on computers and networks).
 
 ### Why businesses invest in security
 
@@ -79,6 +83,7 @@ Useful skills come in two kinds:
 
 - **Threat** – anything that could damage an asset. It can be an event (phishing email, power cut, fire), not just a person.
 - **Threat actor** – the person or group creating the risk.
+- **External threat** – someone outside the organization trying to get into its data, networks or devices.
 - **Insider** – someone with inside access: current staff, ex-staff, contractors, vendors, partners. Ex-employees and vendors count too. Insider threats are not always deliberate: clicking a bad link by mistake is accidental, while snooping through data without permission is intentional.
 
 ### Types of threat actors
@@ -99,14 +104,16 @@ Useful skills come in two kinds:
 
 Others worth knowing: beginners using ready-made tools and scripts, hackers-for-hire who take any job, and self-appointed "vigilantes".
 
+Threat actors are defined by bad intent; hackers are defined by their skills and reasons.
+
 ### Some attacks that shaped the field
 
 | Year | Attack | Why it matters |
 | --- | --- | --- |
-| 1986 | Brain virus | Spread worldwide via floppy disks; showed malware can escape its creator's control |
-| 1988 | Morris worm | Self-copying program that crashed thousands of machines; led to the first incident response teams (CERTs) |
-| 2000 | ILOVEYOU / LoveLetter | Email that spread by mailing itself to contacts; a classic social engineering case |
-| 2017 | Equifax breach | Data of roughly 147 million people exposed through an unpatched known flaw |
+| 1986 | Brain virus | Meant to track illegal copies of medical software, but spread worldwide via floppy disks; showed malware can escape its creator's control |
+| 1988 | Morris worm | Meant to measure the internet, but kept copying itself and crashed about 10% of connected computers; led to the first incident response teams (CERTs, today called CSIRTs) |
+| 2000 | ILOVEYOU / LoveLetter | Email that stole logins and mailed itself to contacts, hitting about 45 million computers; an early social engineering case |
+| 2017 | Equifax breach | Data of roughly 143 million people exposed through an unpatched known flaw |
 
 Lesson from all four: technology changes, but unpatched systems and human trust keep getting exploited.
 
@@ -193,6 +200,9 @@ The (ISC)² CISSP body of knowledge groups security work into eight domains. A h
 | 7 | Security operations | Monitoring, investigations, incident response |
 | 8 | Software development security | Building software securely |
 
+- **Firewall** – a device that watches and filters traffic coming in and going out of a network.
+- **Secure coding** – recommended practices for building safe apps and services.
+
 Rough mapping of attacks to domains:
 - Password, cryptographic and AI-driven attacks → communication and network security (AI also touches identity and access)
 - Social engineering → security and risk management
@@ -208,6 +218,8 @@ Memory hook: **on the wire = network, on a person = risk, in your hand = asset, 
 ---
 
 ## 6. Frameworks, controls and compliance
+
+A **security lifecycle** is the ever-changing set of policies and standards an organization uses to manage risk and stay compliant. Frameworks give it structure.
 
 Think of a hospital protecting patient records:
 
@@ -241,6 +253,10 @@ A voluntary framework from the US National Institute of Standards and Technology
 5. **Recover** – get back to normal
 
 Version 2.0 (2024) adds a sixth function, **Govern**. NIST also publishes the Risk Management Framework (RMF).
+
+**Asset value:** an asset is worth protecting based on what it costs to lose it. A system holding ID or bank numbers needs tighter controls than a public news page.
+
+**Unhappy insiders:** disgruntled employees are among the most dangerous threats because they already have access. Give staff only the access their job needs (least privilege).
 
 ### Governance vs architecture
 
@@ -292,7 +308,7 @@ Security professionals see private data every day, so ethics matter: stay unbias
 
 | Where | Position |
 | --- | --- |
-| United States | No. The Computer Fraud and Abuse Act (1986) makes unauthorized access to any system illegal, including the attacker's. The Cybersecurity Information Sharing Act (2015) allows defensive measures only on your own systems. Only authorized government or military personnel may act offensively. Private counterattacks are treated as vigilantism. |
+| United States | No. Laws such as the Computer Fraud and Abuse Act (1986) and the Cybersecurity Information Sharing Act (2015) make it illegal for private parties; only authorised government or military personnel may. Private counterattacks are treated as vigilantism. |
 | International guidance (ICJ – International Court of Justice) | Only under narrow conditions: it hits only the original attacker, it is a direct request to stop, it does not escalate, and its effects can be undone. |
 
 In practice organizations do not hack back: it is legally risky, can escalate, and could even trigger an international incident if the attacker is state-backed. The Tallinn Manual covers this in depth.
@@ -302,6 +318,8 @@ In practice organizations do not hack back: it is legally risky, can escalate, a
 1. **Confidentiality** – respect privacy; only authorised access.
 2. **Privacy protection** – guard personal and sensitive data from misuse.
 3. **Following the law** – be transparent, honest and evidence-driven, and keep learning.
+
+Real-life checks: never use your access for personal gain (like changing your own pay), never give a colleague access outside official channels, and never share staff details just because someone senior asks informally.
 
 Example: if patient data is exposed, telling the patients is both a legal and an ethical duty.
 
@@ -316,7 +334,7 @@ Example: if patient data is exposed, telling the patients is both a legal and an
 | IDS (intrusion detection system) | Inspects network packets and alerts on possible intrusions (does not block) | Alert on repeated failed logins |
 | Antivirus (anti-malware) | Finds and removes malware, sometimes by scanning memory for known patterns | Quarantines an infected download |
 | Packet sniffer / protocol analyser | Captures and inspects network traffic | tcpdump (CLI), Wireshark (GUI) |
-| Playbook | Step-by-step checklist for a known situation | What to do when a phishing email is reported |
+| Playbook | Step-by-step checklist used before, during and after an incident (also for audits and access reviews) | What to do when a phishing email is reported |
 
 ### Scripting and data
 
@@ -324,7 +342,7 @@ Example: if patient data is exposed, telling the patients is both a legal and an
 | --- | --- | --- |
 | Python | General programming language | Automating repetitive checks and log analysis |
 | SQL | Language for querying databases | Pulling records like "failed logins in the last 24 hours" |
-| Linux | Open-source operating system | Most security tooling runs on it; the command line is essential |
+| Linux | Open-source operating system | Mostly used through the command line; analysts use it to read logs |
 
 A **database** is an organized store of data; a **data point** is a single piece of it (e.g. one login timestamp).
 
