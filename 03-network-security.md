@@ -166,7 +166,7 @@ A **network protocol** is a set of rules for how devices exchange data.
 | DNS | Domain name → IP address | UDP 53 (TCP 53 for large replies and zone transfers) |
 | SSH | Secure remote shell | TCP 22 |
 | SFTP | Secure file transfer over SSH | TCP 22 |
-| FTP | File transfer, not encrypted | TCP 21 |
+| FTP | File transfer, not encrypted | TCP 21 (control), TCP 20 (data) |
 | Telnet | Remote login in plain text (unsafe) | TCP 23 |
 | SMTP | Sending email | TCP 25 (encrypted: 587) |
 | POP3 | Download email to one device | TCP 110 (encrypted: 995) |
@@ -218,7 +218,7 @@ A **VPN** creates an encrypted tunnel between a device and a VPN server, so data
 
 - The encryption covers the path from your device to the VPN server. After that, traffic travels normally, so HTTPS is still needed.
 - The VPN provider can see your traffic, so it must be trusted.
-- **Encapsulation:** wrapping a packet inside another packet. VPNs use it to carry encrypted packets through the tunnel.
+- **Encapsulation:** wrapping a packet inside another packet. If the whole packet were encrypted, routers could not read the addresses. So the VPN puts the encrypted packet inside a new, readable packet: routers use the outer address, and the inner data stays private.
 
 | Type | Connects |
 |---|---|
@@ -244,6 +244,8 @@ A **VPN** creates an encrypted tunnel between a device and a VPN server, so data
 | Internal network | Private servers and employee data |
 | Restricted zone | The most sensitive data, with the least access |
 
+- **Layout:** the DMZ sits between two firewalls (one facing the internet, one in front of the internal network), and the restricted zone has its own firewall. An attacker who gets into the DMZ still cannot reach the internal network easily.
+- **Examples:** a hotel keeps guest Wi-Fi separate from the staff network; a university keeps student and staff subnets apart.
 - **Subnetting:** splitting one network into smaller groups called subnets, using an IP address and a network mask.
 - **CIDR:** writing a range as `198.51.100.0/24` (here, the first 24 bits are the network part, giving 256 addresses). CIDR replaced the old classful (Class A–E) system and made better use of IPv4 addresses.
 
@@ -344,11 +346,13 @@ A network card normally accepts only packets for its own MAC address. In **promi
 | Replay | The attacker captures a packet and sends it again later or delays it |
 | Smurf | The attacker sends ICMP pings to a network's broadcast address using the victim's IP, so every device replies to the victim and floods it |
 
-**Protection:** encrypt data in transit (TLS), configure firewalls to reject spoofed or unauthorized packets, and use NGFWs that spot unusual broadcast traffic. Use several layers of defense (defense in depth).
+**Protection:** encrypt data in transit (TLS), configure firewalls to reject spoofed or unauthorized packets (for example, drop any packet from the internet whose source IP belongs to your own private network), and use NGFWs that spot unusual broadcast traffic. Use several layers of defense (defense in depth).
 
 ## 19. Security hardening
 
 **Security hardening** means reducing a system's vulnerabilities and attack surface (all the ways an attacker could get in).
+
+Think of a network as a house: the attack surface is every door and window, and hardening puts a lock on each one. Hardening applies to hardware, operating systems, apps, networks and databases, and also to physical security (cameras, guards).
 
 Examples: install patches, keep a baseline configuration, remove unused software and services, close unused ports, dispose of old hardware safely, and limit access to what each person needs.
 
