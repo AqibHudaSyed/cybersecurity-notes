@@ -9,7 +9,7 @@ My study notes on core cybersecurity topics, written in my own words. I update t
 | 01 | Foundations of cybersecurity | ✅ | [View notes](01-foundations-of-cybersecurity.md) |
 | 02 | Security domains, frameworks, controls and audits | ✅ | [View notes](02-security-risks.md) 
 | 03 | Networks and network security | ✅ | [View notes](03-network-security.md) |
-| 04 | Linux and SQL | 🔜 | — |
+| 04 | Linux and SQL | ✅ | [View notes](04-linux-and-sql.md) |
 | 05 | Assets, threats and vulnerabilities | 🔜 | — |
 | 06 | Detection and incident response | 🔜 | — |
 | 07 | Python for security automation | 🔜 | — |
